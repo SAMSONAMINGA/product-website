@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BlackVulcan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%), url(1.jpg);
+            background-position: center;
+            background-size: cover;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 2px solid #ff7200;
+        }
+
+        .header h1 {
+            color: #ff7200;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #fff;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 114, 0, 0.2);
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #ff7200;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #ff7200;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .input:focus {
+            outline: none;
+            border-color: #fff;
+            background: rgba(255, 114, 0, 0.1);
+            box-shadow: 0 0 15px rgba(255, 114, 0, 0.3);
+        }
+
+        .textinput {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            grid-column: 1 / -1;
+            background: linear-gradient(45deg, #ff7200, #ff5500);
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 114, 0, 0.4);
+        }
+
+        .social-media-links {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .social-media-links a {
+            display: inline-block;
+            margin: 0 15px;
+            font-size: 24px;
+            color: #ff7200;
+            transition: all 0.3s ease;
+        }
+
+        .social-media-links a:hover {
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #fff;
+            border-top: 2px solid #ff7200;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Contact Us</h1>
+    </div>
+
+    <div class="contact-container">
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" class="input" placeholder="Enter your first name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" class="input" placeholder="Enter your last name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="input" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="input" placeholder="Enter your phone number">
+            </div>
+            
+            <div class="form-group" style="grid-column: 1 / -1">
+                <label for="message">Your Message</label>
+                <textarea id="message" class="input textinput" placeholder="How can we help you?" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <div class="social-media-links">
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 BlackVulcan. All rights reserved.</p>
+    </div>
+</body>
+</html>
